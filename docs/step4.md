@@ -161,7 +161,7 @@ Ok, home stretch. only one method left. This is one we've mentioned before and i
 ```swift
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toContactsSceneController" {
-            let destination = segue.destination as! ContactSceneController
+            let destination = segue.destination as! ContactsSceneController
             let cell = sender as! UITableViewCell
             let indexPath = self.tableView.indexPath(for: cell)!
             if let accountName = self.dataRows[indexPath.row]["Name"] as? String {

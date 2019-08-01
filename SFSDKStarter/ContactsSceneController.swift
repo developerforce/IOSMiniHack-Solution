@@ -1,5 +1,5 @@
 //
-//  AccountSceneController.swift
+//  ContactsSceneController.swift
 //  SFSDKStarter
 //
 //  Created by Kevin Poorman on 7/11/19.
@@ -10,14 +10,21 @@ import Foundation
 import UIKit
 import SalesforceSDKCore
 
-class AccountSceneController: UITableViewController {
+class ContactsSceneController: UITableViewController {
+    var accountId: String?
+    var name: String?
     var dataRows = [Dictionary<String, Any>]()
- 
+    
+    // MARK: - View lifecycle
     override func loadView() {
         super.loadView()
-        self.title = "Accounts"
-        let request = RestClient.shared.request(forQuery: "SELECT Id, Name FROM Account LIMIT 10")
-        
+        guard let aid = self.accountId else {return}
+        let request = RestClient.shared.request(forQuery: "SELECT Id, Name FROM Contact WHERE accountid = '\(aid)' LIMIT 10")
+        if let name = self.name {
+            self.title = name + "'s Contacts"
+        } else {
+            self.title = "Contacts"
+        }
         RestClient.shared.send(request: request, onFailure: { (error, urlResponse) in
             SalesforceLogger.d(type(of:self), message:"Error invoking: \(request)")
         }) { [weak self] (response, urlResponse) in
@@ -47,7 +54,7 @@ class AccountSceneController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "AccountNameCellIdentifier"
+        let cellIdentifier = "ContactNamePrototypeCell"
         
         // Dequeue or create a cell of the appropriate type.
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier:cellIdentifier) ?? UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
@@ -65,17 +72,16 @@ class AccountSceneController: UITableViewController {
         return cell
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toContactsSceneController" {
-            let destination = segue.destination as! ContactsSceneController
+        if segue.identifier == "toContactDetailController" {
+            let destination = segue.destination as! ContactDetailSceneController
             let cell = sender as! UITableViewCell
             let indexPath = self.tableView.indexPath(for: cell)!
-            if let accountName = self.dataRows[indexPath.row]["Name"] as? String {
-                destination.name = accountName
+            if let name = self.dataRows[indexPath.row]["Name"] as? String {
+                destination.name = name
             }
-            if let accountId = self.dataRows[indexPath.row]["Id"] as? String {
-                destination.accountId = accountId
+            if let contactId = self.dataRows[indexPath.row]["Id"] as? String {
+                destination.contactId = contactId
             }
         }
     }
