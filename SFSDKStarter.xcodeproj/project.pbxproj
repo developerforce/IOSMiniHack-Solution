@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B54338C9233C6ED0002D63C6 /* UIImage+resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54338C8233C6ED0002D63C6 /* UIImage+resize.swift */; };
+		B55874B5233BE3DA00E2131A /* TableView+Instrumentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55874B4233BE3DA00E2131A /* TableView+Instrumentation.swift */; };
+		B5815A552339A4DD004B3C1A /* SFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5815A542339A4DD004B3C1A /* SFViewController.swift */; };
+		B5815A65233A5037004B3C1A /* AppDelegate+Trailhead.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5815A64233A5037004B3C1A /* AppDelegate+Trailhead.swift */; };
 		B58C4388226F61D70090B64F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58C4386226F61D70090B64F /* Main.storyboard */; };
 		B58C438A226F61D70090B64F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B58C4389226F61D70090B64F /* Assets.xcassets */; };
 		B58C438D226F61D70090B64F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58C438B226F61D70090B64F /* LaunchScreen.storyboard */; };
@@ -19,6 +23,10 @@
 		B58C441B226FA3390090B64F /* SalesforceAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58C43AC226F634B0090B64F /* SalesforceAnalytics.framework */; };
 		B58C441C226FA3390090B64F /* SalesforceSDKCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58C43BB226F63520090B64F /* SalesforceSDKCommon.framework */; };
 		B58C441D226FA3390090B64F /* SalesforceSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58C43CD226F635B0090B64F /* SalesforceSDKCore.framework */; };
+		B59D87ED22F382E700D1D250 /* AccountSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D87DB22F382E600D1D250 /* AccountSceneController.swift */; };
+		B59D87EE22F382E700D1D250 /* ContactsSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D87EA22F382E600D1D250 /* ContactsSceneController.swift */; };
+		B59D87EF22F382E700D1D250 /* RestClient+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D87EB22F382E700D1D250 /* RestClient+extensions.swift */; };
+		B59D87F022F382E700D1D250 /* ContactDetailSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D87EC22F382E700D1D250 /* ContactDetailSceneController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +124,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B54338C8233C6ED0002D63C6 /* UIImage+resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+resize.swift"; sourceTree = "<group>"; };
+		B55874A0233ADB8E00E2131A /* SFSDKStarter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SFSDKStarter-Bridging-Header.h"; sourceTree = "<group>"; };
+		B55874B4233BE3DA00E2131A /* TableView+Instrumentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Instrumentation.swift"; sourceTree = "<group>"; };
+		B5815A542339A4DD004B3C1A /* SFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFViewController.swift; sourceTree = "<group>"; };
+		B5815A64233A5037004B3C1A /* AppDelegate+Trailhead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Trailhead.swift"; sourceTree = "<group>"; };
 		B58C437D226F61D70090B64F /* SFSDKStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFSDKStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B58C4387226F61D70090B64F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B58C4389226F61D70090B64F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -133,6 +146,10 @@
 		B58C43F1226F650E0090B64F /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B58C43F2226F650E0090B64F /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B58C440A226F83800090B64F /* SFSDKStarter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SFSDKStarter.entitlements; sourceTree = "<group>"; };
+		B59D87DB22F382E600D1D250 /* AccountSceneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSceneController.swift; sourceTree = "<group>"; };
+		B59D87EA22F382E600D1D250 /* ContactsSceneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsSceneController.swift; sourceTree = "<group>"; };
+		B59D87EB22F382E700D1D250 /* RestClient+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RestClient+extensions.swift"; sourceTree = "<group>"; };
+		B59D87EC22F382E700D1D250 /* ContactDetailSceneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailSceneController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,8 +198,16 @@
 		B58C437F226F61D70090B64F /* SFSDKStarter */ = {
 			isa = PBXGroup;
 			children = (
+				B55874B4233BE3DA00E2131A /* TableView+Instrumentation.swift */,
+				B59D87DB22F382E600D1D250 /* AccountSceneController.swift */,
+				B5815A542339A4DD004B3C1A /* SFViewController.swift */,
+				B59D87EC22F382E700D1D250 /* ContactDetailSceneController.swift */,
+				B59D87EA22F382E600D1D250 /* ContactsSceneController.swift */,
+				B59D87EB22F382E700D1D250 /* RestClient+extensions.swift */,
+				B54338C8233C6ED0002D63C6 /* UIImage+resize.swift */,
 				B58C440A226F83800090B64F /* SFSDKStarter.entitlements */,
 				B58C43EF226F650E0090B64F /* AppDelegate.swift */,
+				B5815A64233A5037004B3C1A /* AppDelegate+Trailhead.swift */,
 				B58C43F0226F650E0090B64F /* bootconfig.plist */,
 				B58C43EE226F650E0090B64F /* InitialViewController.swift */,
 				B58C43F1226F650E0090B64F /* main.swift */,
@@ -191,6 +216,7 @@
 				B58C4389226F61D70090B64F /* Assets.xcassets */,
 				B58C438B226F61D70090B64F /* LaunchScreen.storyboard */,
 				B58C438E226F61D70090B64F /* Info.plist */,
+				B55874A0233ADB8E00E2131A /* SFSDKStarter-Bridging-Header.h */,
 			);
 			path = SFSDKStarter;
 			sourceTree = "<group>";
@@ -294,7 +320,7 @@
 				TargetAttributes = {
 					B58C437C226F61D70090B64F = {
 						CreatedOnToolsVersion = 10.2.1;
-						LastSwiftMigration = 1020;
+						LastSwiftMigration = 1100;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 1;
@@ -453,10 +479,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B59D87ED22F382E700D1D250 /* AccountSceneController.swift in Sources */,
 				B58C43F4226F650E0090B64F /* AppDelegate.swift in Sources */,
 				B58C43F3226F650E0090B64F /* InitialViewController.swift in Sources */,
+				B55874B5233BE3DA00E2131A /* TableView+Instrumentation.swift in Sources */,
+				B59D87EF22F382E700D1D250 /* RestClient+extensions.swift in Sources */,
+				B54338C9233C6ED0002D63C6 /* UIImage+resize.swift in Sources */,
 				B58C43F7226F650E0090B64F /* RootViewController.swift in Sources */,
+				B5815A65233A5037004B3C1A /* AppDelegate+Trailhead.swift in Sources */,
 				B58C43F6226F650E0090B64F /* main.swift in Sources */,
+				B59D87F022F382E700D1D250 /* ContactDetailSceneController.swift in Sources */,
+				B59D87EE22F382E700D1D250 /* ContactsSceneController.swift in Sources */,
+				B5815A552339A4DD004B3C1A /* SFViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,6 +663,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.SFSDKStarter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SFSDKStarter/SFSDKStarter-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -650,6 +685,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.SFSDKStarter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SFSDKStarter/SFSDKStarter-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
