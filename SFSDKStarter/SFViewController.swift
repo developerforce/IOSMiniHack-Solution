@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import UIKit
+
+class SFViewController: UITableViewController {
+    override func loadView(){
+        super.loadView()
+        print("In overwritten loadview method")
+    }
+}

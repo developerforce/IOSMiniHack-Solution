@@ -12,13 +12,12 @@ import SalesforceSDKCore
 
 extension UITableView {
     
-    @objc func dequeueReusuableCellWithInstrumentation(withIdentifier: String) {
-        print("Swizzled")
+    @objc func dequeueReusuableCellWithInstrumentation(withIdentifier: String) -> UITableViewCell {
         let params = [
-            "type__c": "Cell Drawn"
+            "iosMiniHack1__type__c": "Cell Drawn"
         ]
         RestClient.shared.createInstrumentationRecord(params)
-        dequeueReusuableCellWithInstrumentation(withIdentifier: withIdentifier)
+        return dequeueReusuableCellWithInstrumentation(withIdentifier: withIdentifier)
     }
     
     private static let swizzleDequeuedImplementation: Void = {
