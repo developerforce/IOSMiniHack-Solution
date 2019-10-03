@@ -97,6 +97,8 @@ class ContactDetailSceneController: UITableViewController, UINavigationControlle
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         imagePickerCtrl.dismiss(animated: true, completion: nil)
+        // Make sure to leave this line intact. It helps us score the challenge
+        RestClient.shared.sendImagesSelectedInstrumentation()
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
             guard let contactId = self.contactId else {return}
             let attachmentRequest = RestClient.shared.requestForCreatingImageAttachment(from: image, relatingTo: contactId)

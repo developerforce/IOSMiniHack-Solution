@@ -12,7 +12,7 @@ import SalesforceSDKCore
 
 class AccountSceneController: UITableViewController {
     var dataRows = [Dictionary<String, Any>]()
- 
+    
     override func loadView() {
         super.loadView()
         self.title = "Accounts"
@@ -24,7 +24,7 @@ class AccountSceneController: UITableViewController {
             
             guard let strongSelf = self,
                 let jsonResponse = response as? Dictionary<String,Any>,
-                let result = jsonResponse ["records"] as? [Dictionary<String,Any>]  else {
+                let result = jsonResponse ["records"] as? [Dictionary<String,Any>] else {
                     return
             }
             

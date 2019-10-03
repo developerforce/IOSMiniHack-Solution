@@ -38,7 +38,8 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
                 self.setupRootViewController()
             }
         })
-        
+
+        initInstrumentation()
     }
     
     // MARK: - App delegate lifecycle
@@ -111,9 +112,8 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
     }
     
     func setupRootViewController() {
-        let rootVC = RootViewController(nibName: nil, bundle: nil)
-        let navVC = UINavigationController(rootViewController: rootVC)
-        self.window?.rootViewController = navVC
+        self.window!.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        self.window!.makeKeyAndVisible()
     }
     
     func resetViewState(_ postResetBlock: @escaping () -> ()) {
