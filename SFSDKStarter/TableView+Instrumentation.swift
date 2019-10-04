@@ -13,9 +13,14 @@ import SalesforceSDKCore
 extension UITableView {
     
     @objc func dequeueReusuableCellWithInstrumentation(withIdentifier: String) -> UITableViewCell {
+        guard let dataSource = self.dataSource
+            else { return self.dequeueReusuableCellWithInstrumentation(withIdentifier: withIdentifier)}
+        
         let params = [
-            "iosMiniHack1__type__c": "Cell Drawn"
+            "iosMiniHack1__type__c": "Cell Drawn",
+            "iosMiniHack1__Extra_Data__c": String(describing: type(of: dataSource))
         ]
+        
         RestClient.shared.createInstrumentationRecord(params)
         return dequeueReusuableCellWithInstrumentation(withIdentifier: withIdentifier)
     }
