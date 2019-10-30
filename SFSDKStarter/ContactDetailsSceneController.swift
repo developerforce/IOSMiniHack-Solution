@@ -1,5 +1,5 @@
 //
-//  ContactDetailSceneController.swift
+//  ContactDetailsSceneController.swift
 //  SFSDKStarter
 //
 //  Created by Kevin Poorman on 7/11/19.
