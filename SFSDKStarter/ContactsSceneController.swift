@@ -74,7 +74,7 @@ class ContactsSceneController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toContactDetailController" {
-            let destination = segue.destination as! ContactDetailSceneController
+            let destination = segue.destination as! ContactDetailsSceneController
             let cell = sender as! UITableViewCell
             let indexPath = self.tableView.indexPath(for: cell)!
             if let name = self.dataRows[indexPath.row]["Name"] as? String {

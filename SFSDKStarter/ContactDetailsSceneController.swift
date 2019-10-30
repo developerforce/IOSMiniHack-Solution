@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SalesforceSDKCore
 
-class ContactDetailSceneController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class ContactDetailsSceneController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     let fieldBlacklist = ["attributes", "Id"]
     var contactId: String?
